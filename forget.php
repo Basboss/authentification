@@ -34,6 +34,8 @@ if(!empty($POST)) {
             'expired_at' => $expiredAt->format('Y-m-d'),
             'user_id' => $user['id'],
         ]);
+
+        echo $baseUrl.'reset.php?token='.$token;
     } else {
         $error = 'Si le compte existe, le token a été envoyé';
     }
